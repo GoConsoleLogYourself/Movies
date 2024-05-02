@@ -1,0 +1,56 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  margin-top: 10px;
+  margin-left: 50px;
+  margin-right: 50px;
+  form {
+    position: relative;
+  }
+  img {
+    cursor: pointer;
+  }
+}
+
+.search {
+  display: block;
+  height: 35px;
+  width: 500px;
+  background-color: #fff;
+  color: #000;
+  border-radius: 15px;
+  border: 1px solid red;
+  text-align: center;
+}
+
+.searchBtn {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0.15em;
+  right: 0.15em;
+  height: 31px;
+  width: 50px;
+  border-radius: 15px;
+  border: 1px solid black;
+  text-transform: uppercase;
+  background-color: red;
+  cursor: pointer;
+  div {
+    position: absolute;
+    top: -1px;
+  }
+}
+
+.accLink {
+  font-size: 20px;
+  text-decoration: underline red;
+  cursor: pointer;
+  &:hover {
+    color: red;
+    text-decoration: underline black;
+  }
+  transition: all 0.2s ease-in;
+}

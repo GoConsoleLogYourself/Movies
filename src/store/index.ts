@@ -11,14 +11,17 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { moviesApi } from "./moviesApi";
+import movieSlice from "./slices/movieSlice";
 
 const persistConfig = {
   key: "root",
   storage,
+  blacklist: ["movies"],
 };
 
 const rootReducer = combineReducers({
   [moviesApi.reducerPath]: moviesApi.reducer,
+  movies: movieSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

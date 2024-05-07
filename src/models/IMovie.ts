@@ -5,6 +5,7 @@ export interface IMovie {
   year: number;
   rating: number;
   janres: string;
+  poster: string;
   img: string;
   desc: string;
 }

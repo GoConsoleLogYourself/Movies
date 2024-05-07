@@ -24,7 +24,7 @@ const Header: FC<HeadersProps> = ({ data }) => {
   };
   return (
     <div className={styles.header}>
-      <img onClick={() => navigate("/main")} src={img} alt="NiggerFlex" />
+      <img onClick={() => navigate("/movies")} src={img} alt="NiggerFlex" />
       <form>
         <input
           value={search}

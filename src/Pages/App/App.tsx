@@ -10,6 +10,7 @@ import {
   sortMoviesByHighestRating,
   sortMoviesByLowestRating,
 } from "../../store/slices/movieSlice";
+import { useNavigate } from "react-router-dom";
 
 function App() {
   const [minYear, setMinYear] = useState<string>("1980");
@@ -24,6 +25,7 @@ function App() {
   const { data = [] } = useGetMoviesQuery(40);
   const { movies } = useAppSelector((state) => state.movies);
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const filterMovies = () => {
     const filtredMovies = data.filter(
       (item) =>
@@ -52,6 +54,7 @@ function App() {
     if (movies.length) {
       dispatch(sortMoviesByHighestRating());
     }
+    setFailedFilter(false);
     setLowestRatingChoosen(false);
     setHighestRatingChoosen(true);
   };
@@ -64,6 +67,7 @@ function App() {
     if (movies.length) {
       dispatch(sortMoviesByLowestRating());
     }
+    setFailedFilter(false);
     setHighestRatingChoosen(false);
     setLowestRatingChoosen(true);
   };
@@ -101,6 +105,7 @@ function App() {
           {movies.length <= 0
             ? data.map((item) => (
                 <div
+                  onClick={() => navigate(`/movies/${item.title}`)}
                   key={item.id}
                   className={failedFilter ? styles.none : styles.card}
                 >

@@ -10,7 +10,7 @@ import {
 } from "@vidstack/react/player/layouts/default";
 
 interface PlayerProps {
-  poster: string;
+  poster: string | undefined;
 }
 
 const Player: FC<PlayerProps> = ({ poster }) => {

@@ -33,14 +33,35 @@
   @include headers-font;
   cursor: pointer;
   &:hover {
-    color: red;
+    color: rgba(122, 18, 35, 1);
   }
   transition: all 0.2s ease-in;
 }
 
-.player{
+.player {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 150px;
+}
+
+.movieOptions {
+  text-align: center;
+  div {
+    border: 1px solid rgba(122, 18, 35, 1);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -webkit-box-shadow: inset 0px 0px 10px 2px rgba(122, 18, 35, 1);
+    -moz-box-shadow: inset 0px 0px 10px 2px rgba(122, 18, 35, 1);
+    box-shadow: inset 0px 0px 10px 2px rgba(122, 18, 35, 1);
+    p {
+      cursor: pointer;
+      margin-top: 10px;
+      margin-left: 0;
+      &:hover {
+        color: rgba(122, 18, 35, 1);
+      }
+      transition: all 0.2s ease-in;
+    }
+  }
 }

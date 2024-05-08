@@ -39,7 +39,9 @@ const Header: FC<HeadersProps> = ({ data }) => {
           </div>
         </button>
       </form>
-      <div className={styles.accLink}>Account</div>
+      <div onClick={() => navigate("/account")} className={styles.accLink}>
+        Account
+      </div>
     </div>
   );
 };

@@ -72,9 +72,9 @@ function App() {
     setLowestRatingChoosen(true);
   };
   return (
-    <div className={styles.app}>
+    <main className={styles.app}>
       <Header data={data} />
-      <div className={styles.main}>
+      <main className={styles.main}>
         <div className={styles.sortByRating}>
           <button
             onClick={() => sortByHighestRating()}
@@ -97,7 +97,7 @@ function App() {
             Сначала худшие
           </button>
         </div>
-        <div className={styles.cards}>
+        <section className={styles.cards}>
           <div className={failedFilter ? styles.failedFilter : styles.none}>
             <p>К сожалению поиск не дал результатов...</p>
             <img src={fail} alt="fail" />
@@ -122,7 +122,11 @@ function App() {
                 </div>
               ))
             : movies.map((item) => (
-                <div key={item.id} className={styles.card}>
+                <div
+                  onClick={() => navigate(`/movies/${item.title}`)}
+                  key={item.id}
+                  className={styles.card}
+                >
                   <div className={styles.rating}>
                     <p>{item.rating}</p>
                   </div>
@@ -135,8 +139,8 @@ function App() {
                   </div>
                 </div>
               ))}
-        </div>
-        <div className={styles.filter}>
+        </section>
+        <section className={styles.filter}>
           <form>
             <p>
               Выберите год <br /> от:
@@ -187,9 +191,9 @@ function App() {
           <button className={styles.filterBtn} onClick={filterMovies}>
             Поиск
           </button>
-        </div>
-      </div>
-    </div>
+        </section>
+      </main>
+    </main>
   );
 }
 

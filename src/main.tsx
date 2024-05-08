@@ -7,6 +7,7 @@ import { Provider } from "react-redux";
 import Loading from "./components/Loading/Loading.tsx";
 import { LazyMoviePage } from "./Pages/MoviePage/MoviePage.lazy.tsx";
 import { Suspense } from "react";
+import { LazyAccount } from "./Pages/Account/Account.lazy.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
@@ -20,6 +21,14 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             element={
               <Suspense fallback={<Loading />}>
                 <LazyMoviePage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/account"
+            element={
+              <Suspense fallback={<Loading />}>
+                <LazyAccount />
               </Suspense>
             }
           />

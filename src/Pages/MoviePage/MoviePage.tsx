@@ -1,24 +1,30 @@
 import { FC } from "react";
 import styles from "./moviePage.module.scss";
 import { useNavigate, useParams } from "react-router-dom";
-import Header from "../../components/Header/Header";
 import { useGetMoviesQuery } from "../../store/moviesApi";
+import Header from "../../components/Header/Header";
 import Player from "../../components/Player/Player";
 
 const MoviePage: FC = () => {
   const params = useParams();
   const navigate = useNavigate();
   const { data = [] } = useGetMoviesQuery(40);
-  const currentMovie = data.find((item) => item.title === params.title);
+  const currentMovie = data.find((item) => item.title.trim() === params.title);
   return (
     <>
       <Header data={data} />
-      <div className={styles.goBack} onClick={() => navigate(-1)}>
+      <button className={styles.goBack} onClick={() => navigate(-1)}>
         {"< Назад"}
-      </div>
-      <div className={styles.movieContainer}>
-        <div className={styles.movieInfo}>
-          <img src={currentMovie?.img} alt="img" />
+      </button>
+      <main className={styles.movieContainer}>
+        <section className={styles.movieInfo}>
+          <div className={styles.movieOptions}>
+            <img src={currentMovie?.img} alt="img" />
+            <div>
+              <p>Отложить просмотр</p>
+              <p>Добавить в избранное</p>
+            </div>
+          </div>
           <div className={styles.movieDesc}>
             <p>{currentMovie?.title}</p>
             <p>Дата выхода: {currentMovie?.date}</p>
@@ -26,11 +32,11 @@ const MoviePage: FC = () => {
             <p>Жанр: {currentMovie?.janres}</p>
             <p>{currentMovie?.desc}</p>
           </div>
-        </div>
-        <div className={styles.player}>
-          <Player poster={currentMovie!.poster} />
-        </div>
-      </div>
+        </section>
+        <section className={styles.player}>
+          <Player poster={currentMovie?.poster} />
+        </section>
+      </main>
     </>
   );
 };

@@ -11,6 +11,7 @@ import {
   sortMoviesByLowestRating,
 } from "../../store/slices/movieSlice";
 import { useNavigate } from "react-router-dom";
+import Card from "../../components/Card/Card";
 
 function App() {
   const [minYear, setMinYear] = useState<string>("1980");
@@ -104,40 +105,26 @@ function App() {
           </div>
           {movies.length <= 0
             ? data.map((item) => (
-                <div
-                  onClick={() => navigate(`/movies/${item.title}`)}
+                <Card
                   key={item.id}
-                  className={failedFilter ? styles.none : styles.card}
-                >
-                  <div className={styles.rating}>
-                    <p>{item.rating}</p>
-                  </div>
-                  <img src={item.img} alt={item.title} />
-                  <div className={styles.info}>
-                    <h5>{item.title}</h5>
-                    <p>{item.date}</p>
-                    <p>{item.janres}</p>
-                    <div>Смотреть позже</div>
-                  </div>
-                </div>
+                  title={item.title}
+                  rating={item.rating}
+                  date={item.date}
+                  img={item.img}
+                  janre={item.janres}
+                  onClick={() => navigate(`/movies/${item.title}`)}
+                />
               ))
             : movies.map((item) => (
-                <div
-                  onClick={() => navigate(`/movies/${item.title}`)}
+                <Card
                   key={item.id}
-                  className={styles.card}
-                >
-                  <div className={styles.rating}>
-                    <p>{item.rating}</p>
-                  </div>
-                  <img src={item.img} alt={item.title} />
-                  <div className={styles.info}>
-                    <h5>{item.title}</h5>
-                    <p>{item.date}</p>
-                    <p>{item.janres}</p>
-                    <div>Смотреть позже</div>
-                  </div>
-                </div>
+                  title={item.title}
+                  rating={item.rating}
+                  date={item.date}
+                  img={item.img}
+                  janre={item.janres}
+                  onClick={() => navigate(`/movies/${item.title}`)}
+                />
               ))}
         </section>
         <section className={styles.filter}>

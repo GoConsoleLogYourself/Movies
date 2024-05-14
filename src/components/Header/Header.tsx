@@ -6,6 +6,7 @@ import { IMovie } from "../../models/IMovie";
 import { useAppDispatch } from "../../hooks";
 import { addSearchedMovies } from "../../store/slices/movieSlice";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/useAuth";
 
 interface HeadersProps {
   data: IMovie[];
@@ -14,6 +15,7 @@ const Header: FC<HeadersProps> = ({ data }) => {
   const [search, setSearch] = useState<string>("");
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
+  const { isAuth } = useAuth();
   const searchedMovies = useMemo(() => {
     return data.filter((movie) => movie.title.toLowerCase().includes(search));
   }, [search, data]);
@@ -21,6 +23,13 @@ const Header: FC<HeadersProps> = ({ data }) => {
     event.preventDefault();
     dispatch(addSearchedMovies(searchedMovies));
     setSearch("");
+  };
+  const handleCheckLogin = () => {
+    if (isAuth) {
+      navigate("/account");
+    } else {
+      navigate("/login");
+    }
   };
   return (
     <div className={styles.header}>
@@ -39,7 +48,7 @@ const Header: FC<HeadersProps> = ({ data }) => {
           </div>
         </button>
       </form>
-      <div onClick={() => navigate("/account")} className={styles.accLink}>
+      <div onClick={() => handleCheckLogin()} className={styles.accLink}>
         Account
       </div>
     </div>

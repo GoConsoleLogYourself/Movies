@@ -1,0 +1,125 @@
+@import "../../Scss/reset";
+@import "../../Scss/vars";
+@import "../../Scss/base";
+@import "../../Scss/fonts";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  input:invalid + .btnNone {
+    pointer-events: none;
+  }
+}
+
+.header {
+  font-size: 40px;
+  @include headers-font;
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+.login {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 500px;
+  height: 50px;
+  font-size: 32px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.password {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 500px;
+  height: 50px;
+  font-size: 32px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.name {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 500px;
+  height: 50px;
+  font-size: 32px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.checkPass {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 500px;
+  height: 50px;
+  font-size: 32px;
+  text-align: center;
+}
+
+.notMatch {
+  border: 2px solid red;
+  border-radius: 10px;
+  width: 500px;
+  height: 50px;
+  font-size: 32px;
+  text-align: center;
+}
+.none {
+  display: none;
+}
+.notMatchText {
+  @include headers-font;
+  position: absolute;
+  margin-left: 800px;
+  font-size: 20px;
+  text-decoration: underline red;
+}
+.notMatchContainer {
+  display: flex;
+  gap: 50px;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.phoneNum {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 500px;
+  height: 50px;
+  font-size: 32px;
+  margin-bottom: 50px;
+  text-align: center;
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+.loginLink {
+  font-size: 24px;
+  @include text-font;
+  margin-top: 25px;
+}
+
+.register {
+  font-size: 24px;
+  @include text-font;
+  margin-top: 25px;
+}
+
+.submitBtn {
+  background-color: red;
+  height: 64px;
+  width: max-content;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 15px;
+  border: 2px solid black;
+  box-shadow: 1px 1px 5px 1px rgba(58, 57, 57, 0.75);
+  &:hover {
+    background-color: black;
+    color: white;
+    border: 2px solid red;
+  }
+  transition: all 0.2s ease-in;
+}

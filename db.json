@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "id": 1,
+      "id": "1",
       "title": "1+1",
       "date": "26 апреля 2012",
       "year": 2012,
@@ -12,7 +12,7 @@
       "desc": "Аристократ на коляске нанимает в сиделки бывшего заключенного. Искрометная французская комедия с Омаром Си"
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Зеленая миля",
       "date": "6 декабря 1999",
       "year": 1999,
@@ -23,7 +23,7 @@
       "desc": "Пол Эджкомб — начальник блока смертников в тюрьме «Холодная гора», каждый из узников которого однажды проходит «зеленую милю» по пути к месту казни. Пол повидал много заключённых и надзирателей за время работы. Однако гигант Джон Коффи, обвинённый в страшном преступлении, стал одним из самых необычных обитателей блока."
     },
     {
-      "id": 3,
+      "id": "3",
       "title": "Форрест Гамп",
       "date": "23 июня 1994",
       "year": 1994,
@@ -34,7 +34,7 @@
       "desc": "Сидя на автобусной остановке, Форрест Гамп — не очень умный, но добрый и открытый парень — рассказывает случайным встречным историю своей необыкновенной жизни. С самого малолетства парень страдал от заболевания ног, соседские мальчишки дразнили его, но в один прекрасный день Форрест открыл в себе невероятные способности к бегу. Подруга детства Дженни всегда его поддерживала и защищала, но вскоре дороги их разошлись."
     },
     {
-      "id": 4,
+      "id": "4",
       "title": "Побег из Шоушенка",
       "date": "10 сентября 1994",
       "year": 1994,
@@ -45,7 +45,7 @@
       "desc": "Бухгалтер Энди Дюфрейн обвинён в убийстве собственной жены и её любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решётки. Каждый, кто попадает в эти стены, становится их рабом до конца жизни. Но Энди, обладающий живым умом и доброй душой, находит подход как к заключённым, так и к охранникам, добиваясь их особого к себе расположения."
     },
     {
-      "id": 5,
+      "id": "5",
       "title": "Бойцовский клуб",
       "date": "10 сентября 1999",
       "year": 1999,
@@ -56,7 +56,7 @@
       "desc": "Страховой работник разрушает рутину своей благополучной жизни. Культовая драма по книге Чака Паланика"
     },
     {
-      "id": 6,
+      "id": "6",
       "title": "Криминальное чтиво",
       "date": "21 мая 1994",
       "year": 1994,
@@ -67,7 +67,7 @@
       "desc": "Двое бандитов Винсент Вега и Джулс Винфилд ведут философские беседы в перерывах между разборками и решением проблем с должниками криминального босса Марселласа Уоллеса."
     },
     {
-      "id": 7,
+      "id": "7",
       "title": "Леон",
       "date": "14 сентября 1994",
       "year": 1994,
@@ -78,7 +78,7 @@
       "desc": "Осиротевшая девочка становится напарницей наемного убийцы. Культовый триллер с Жаном Рено и Натали Портман"
     },
     {
-      "id": 8,
+      "id": "8",
       "title": "Остров проклятых",
       "date": "13 февраля 2010",
       "year": 2010,
@@ -89,7 +89,7 @@
       "desc": "Двое приставов расследуют побег пациентки из мрачной психбольницы. Параноидальный триллер с Леонардо ДиКаприо"
     },
     {
-      "id": 9,
+      "id": "9",
       "title": "Достучаться до небес",
       "date": "20 февраля 1997",
       "year": 1997,
@@ -100,7 +100,7 @@
       "desc": "Смертельно больные Мартин и Руди едут к морю на угнанной машине. Роль, сделавшая Тиля Швайгера суперзвездой"
     },
     {
-      "id": 10,
+      "id": "10",
       "title": "Начало",
       "date": "13 августа 2020",
       "year": 2010,
@@ -111,7 +111,7 @@
       "desc": "Кобб – талантливый вор, лучший из лучших в опасном искусстве извлечения: он крадет ценные секреты из глубин подсознания во время сна, когда человеческий разум наиболее уязвим. Редкие способности Кобба сделали его ценным игроком в привычном к предательству мире промышленного шпионажа, но они же превратили его в извечного беглеца и лишили всего, что он когда-либо любил."
     },
     {
-      "id": 11,
+      "id": "11",
       "title": "Терминатор 2: Судный день",
       "date": "1 июля 1991",
       "year": 1991,
@@ -122,7 +122,7 @@
       "desc": "Перепрограммированный робот должен защитить маленького Джона Коннора. Самый дорогой блокбастер своего времени"
     },
     {
-      "id": 12,
+      "id": "12",
       "title": "Поймай меня, если сможешь",
       "date": "16 декабря 2002",
       "year": 2002,
@@ -133,7 +133,7 @@
       "desc": "Фрэнк Эбегнейл успел поработать врачом, адвокатом и пилотом на пассажирской авиалинии – и все это до достижения полного совершеннолетия в 21 год. Мастер в обмане и жульничестве, он также обладал искусством подделки документов, что в конечном счете принесло ему миллионы долларов, которые он получил по фальшивым чекам."
     },
     {
-      "id": 13,
+      "id": "13",
       "title": "Большой куш",
       "date": "23 августа 2000",
       "year": 2000,
@@ -144,7 +144,7 @@
       "desc": "Фрэнки Четыре Пальца должен был переправить краденый алмаз из Англии в США своему боссу Эви, но, сделав ставку на подпольный боксерский поединок, он попал в круговорот весьма нежелательных событий. Вокруг него и его груза разворачивается сложная интрига с участием множества колоритных персонажей лондонского дна — русского гангстера, троих незадачливых грабителей, хитрого боксера и угрюмого громилы грозного мафиози. Каждый норовит в одиночку сорвать большой куш."
     },
     {
-      "id": 14,
+      "id": "14",
       "title": "Темный рыцарь",
       "date": "14 июля 2008",
       "year": 2008,
@@ -155,7 +155,7 @@
       "desc": "Бэтмен поднимает ставки в войне с криминалом. С помощью лейтенанта Джима Гордона и прокурора Харви Дента он намерен очистить улицы Готэма от преступности. Сотрудничество оказывается эффективным, но скоро они обнаружат себя посреди хаоса, развязанного восходящим криминальным гением, известным напуганным горожанам под именем Джокер."
     },
     {
-      "id": 15,
+      "id": "15",
       "title": "Назад в будущее",
       "date": "3 июля 1985",
       "year": 1985,
@@ -166,6 +166,29 @@
       "desc": "Подросток Марти с помощью машины времени, сооружённой его другом-профессором доком Брауном, попадает из 80-х в далекие 50-е. Там он встречается со своими будущими родителями, ещё подростками, и другом-профессором, совсем молодым."
     }
   ],
-  "favourites": [],
+  "favourites": [
+    {
+      "id": "aZR0Dp1sUOUqP6qRZ3KROIWsJhp16547",
+      "title": "Побег из Шоушенка",
+      "date": "10 сентября 1994",
+      "year": 1994,
+      "rating": 9.1,
+      "img": "https://www.kinopoisk.ru/T16c4a162/70cb5aE7Rm/vhygr-cuzucXi10Y8P8s0a-X2t-vHTt8HcONmfp8YiQEkgnoDoA3G29o7Y_noE7hLmbrm5pOaKTl7kr4uF-sKvwb5Pq4PNKyR9VLUff3f9a1joSDugZzKlnensShI00ULKAgmii_HztDCavNqbcVungmq5bEC2G49qk4w6lf-lOnLKS50jGDyyGvIAT1wjDEstDy6I5KEl0EjaG_-39FAiW3NIAfgCUSYBGd8LjOKL5HG7GTzihszNOoHs_jUvNvpwSfnN0UmeULrAMR0v0hx4X1wfycZxtgMKGoovhwQhE0tCqBLLc5JH0dn9CT1zeJXTyuodkXXcfPjgD4513LcJ41t4neDrD9AYgrMfL4KcW628XrlEcGcCylo4juVVkxNYc6nQqKBA9lAbfglvcZon0GkIHqNkT9xp4gydFU9EWrDJis-zqsySCKOjP7-R7skv3XwJ9xCXcqv62a0Ud6MySMNI4Vmx87WCSUwLToE4VQO7m62iFg1M2IJtHlSs1IsDusmuESgcI9vwoZ1Mkq953w3OKxWj5cDr6umPJQcw4btgquAqUgO2ATjvOv4Ti9dTmYlsY-b_PSnjP3z1n3b4cKpYjSE4jnKbQlK8DjP9C67NjLuHk2aR6jt4LFeko9DK8bqxCrJyxcKb3Ck-w6pmcRs4HpFHv67Iw17s5T0UCHH7GF_xqR6CGyMjD56wnRgPTO47lENFQjoYWe9V9ACj6LGIYEqSYmZQGU2Y32M7RgEbGt-ylm1MGSLdfsT9lNhTyygtQMrMU9qTAY_ucH_obz-e-iWQpgH6mDu9Vwfi8MsyymFp8vMEUGrtG43SydcCG8ncY8fNXtigzRz1XzYLkfvp7SOqTfNpc-F8XVG-Oiy9HStksEfh2pkpbzUEAPGpIAnReEJglsEJfCtdwTq1QgspDVL1j81Jsm-ep1_0i8JLOGxDW48wOiITvb1z79n-jn-ItxM0MctoO1x2NFODuWMKYpgxAmWAyQ2In4OZZ0AIyU_B9P1_K2Ie_xVMNRqjewqt4Vh-QajDw12vAp-6TVw_WBZzFSEIGth-d3dQEjrA2VE4ERMGcUvf6J8xabcz-4uPscb-DgvyzR20beT6ERnoDtHrH4Ma82MtrYK_iG4Pzyq1gMSwu6jrzyenAhP5AIlhS9HwZmAb_5id4rgVoOv5XfKlDH_pcM__hF4WGhMJm8wC-6-AucHAz18Arbg9jQ-Kh9F3o7i6OB23pAOxmJCqEXiBsEYC26-LH7MpJDGbGXwzxz__6MFf_FeutjpjCxn8Qoj-MKoiQi2PIY-obW8Nm9WB59HLaVnP1jXDw_mTStLb0QPVwrpuuZ3BKbdR2KkfwOb_zwsDH0z3T2U4Y0prvAEZrIJrAQO_zZEtmY7P3sq30yYRCrsIb2QXYnAbYasy-rLg9vNbnIqNckmFwIsLDnInD5xZcmzOZe0kSFOqK5-S-o2TytPgbw9STclMnA3pF-MnELvqSI5Hp_GxenIKowlQUEbimd0ZnwM5twAZyJ7D1cwuKWLNvsZupFpxeyn-Qssdw2gR028uIt-q7u4MyTWBdgCqGUoM5UZCI9hRicBYccDnkCktWt1CSScCS6ut8RQuHppijt63T6b7k1gYbaGIz-HaISK-fzHPWS2vbJq0QrXSqlkLPuRUEjGrQqrAGHLhNNBLvum8sOm2cei7X7CEz00rYw7flx2XKtEpyWxxWT6Dm_OTHj8yDuufbk2ZhxF2sxtpOm42lfDxqtGqsmpAEuXCCI0arDBoFyGLSM4xVs5cGuM8voWtZJug-5q8QFgd0DgiIp-tAA5aHM0didcDB3AaGgocFndz0VlgCIP6EXPWU3j9aT4RGbfAGSvu8QWOzCqiXZ41bMXokWraX7NYXlGa8eMtjhAdmk3d7sjkgaTxitsZ3bVn4hPYgjlTWqLitYCJj-n_sVvWUAqKvHEnvmz5gL5N1xyV6nLLqP1CWM4jezPTTT_QnFvt3x15JZN3UNg6Oc3lRjJiy0E4cInD4WWyC_84jaM4ZTMa6ezxBn8MKrEcnDbPxzkBWNpNI1h-IUtioU48UR4qXQ9_ijaxhbBqKOl-VBQzkmkjSgLJUTL3oztfum_T2gYDmDjvU7ZsPimgDI013tV5sevovfGJjSEYEwJN75D9qA3-bfonUbbQqbrIjlUGggKYwbiw6cFz19C5bbsekvvFkinZLYLkL-65Q30ONXznOtB4yl3w-V-gOTACn31C_-vsrizLFQD3Q7loeA_GJ9AT6DJbwghR0WcCmf7q_OEL5_HamNwSJE8vW9I-TlcvRugz-RosE-i8M8jTglwskmzqLA8vSQfStgHouQm_9nUAQCsQShMqEXMV8MhNaV3RGUWAOPgcECYuP3nQHNwlbuRYA8mLjkFIn8GYw9K-DVOs2E-9npknAkawy3qbb4VkoDGKk0jiiYGzFfI7DQifQvhXohkrjqH2f0ypAo6f1U8Gq6F52-zQin-wG0AQL32CnVvPHA9LlwKHgoop6032BzHSubOoA_phQ0ZTSU9ZLdC7l5DJeX-h5e98OQKs7sReJ3pBmWgdIeqdo2vhYZxtkO1rb29fSfUB11AbyMk-JHYjM4pxqhJII3L2QAls6GzjmSdwyRt-MIW97ytzH3y1r9Yr0tgInSJYzGEooQJvzUHNG18cXek1YfUhuKpIHiQ1wSKbMMqw2gDypQEanRutsOhmMeuZzADE3AxqUe0sJN42ysHpK-2CyQzwaKAAj12yXkkvLO_phQGGERhIS61lpoMxibF4czpwE6ZBaYzZHcN5BTD7623D9t0eWLN9PYbt9zkC2CqPoqhNsgvBIp89wf373zxOi6YBpVPLauoeBXdyQKtQWRFKgFPl4mpPy1_wy6ZiSTl-4KWOfKiRft7FP4bpEfva3fMo7NAJAcBfPIGNmj1PffonMRYQG0n6HWRGgHBYIOpyO6GTlyEajrrO8MkX4KgrTjHljMxZs",
+      "poster": "https://cdn.ananasposter.ru/image/cache/catalog/poster/film/80/24482-1000x830.jpg",
+      "janres": "драма",
+      "desc": "Бухгалтер Энди Дюфрейн обвинён в убийстве собственной жены и её любовника. Оказавшись в тюрьме под названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решётки. Каждый, кто попадает в эти стены, становится их рабом до конца жизни. Но Энди, обладающий живым умом и доброй душой, находит подход как к заключённым, так и к охранникам, добиваясь их особого к себе расположения."
+    },
+    {
+      "id": "gS1d0eMed4YRVpmLJxArUHaOKKz26933",
+      "title": "1+1",
+      "date": "26 апреля 2012",
+      "year": 2012,
+      "rating": 8.8,
+      "img": "https://www.kinopoisk.ru/T16c4a162/70cb5aE7Rm/vhygr-cuzucXi10Y8P8s0a-X2t-vHTt8HcONmfp8YiQEkgnoDoA3G29o7YPqr0rmL2a5n5RLaKKy6UqtuASiKvxM4fu4ZITuQtUQA6j3KoG024XYuQdzKlnensShI00ULKAgmii_HztDCavNqbcVungmq5bEC2G49qk4w6lf-lOnLKS50jGDyyGvIAT1wjDEstDy6I5KEl0EjaG_-39FAiW3NIAfgCUSYBGd8LjOKL5HG7GTzihszNOoHs_jUvNvpwSfnN0UmeULrAMR0v0hx4X1wfycZxtgMKGoovhwQhE0tCqBLLc5JH0dn9CT1zeJXTyuodkXXcfPjgD4513LcJ41t4neDrD9AYgrMfL4KcW628XrlEcGcCylo4juVVkxNYc6nQqKBA9lAbfglvcZon0GkIHqNkT9xp4gydFU9EWrDJis-zqsySCKOjP7-R7skv3XwJ9xCXcqv62a0Ud6MySMNI4Vmx87WCSUwLToE4VQO7m62iFg1M2IJtHlSs1IsDusmuESgcI9vwoZ1Mkq953w3OKxWj5cDr6umPJQcw4btgquAqUgO2ATjvOv4Ti9dTmYlsY-b_PSnjP3z1n3b4cKpYjSE4jnKbQlK8DjP9C67NjLuHk2aR6jt4LFeko9DK8bqxCrJyxcKb3Ck-w6pmcRs4HpFHv67Iw17s5T0UCHH7GF_xqR6CGyMjD56wnRgPTO47lENFQjoYWe9V9ACj6LGIYEqSYmZQGU2Y32M7RgEbGt-ylm1MGSLdfsT9lNhTyygtQMrMU9qTAY_ucH_obz-e-iWQpgH6mDu9Vwfi8MsyymFp8vMEUGrtG43SydcCG8ncY8fNXtigzRz1XzYLkfvp7SOqTfNpc-F8XVG-Oiy9HStksEfh2pkpbzUEAPGpIAnReEJglsEJfCtdwTq1QgspDVL1j81Jsm-ep1_0i8JLOGxDW48wOiITvb1z79n-jn-ItxM0MctoO1x2NFODuWMKYpgxAmWAyQ2In4OZZ0AIyU_B9P1_K2Ie_xVMNRqjewqt4Vh-QajDw12vAp-6TVw_WBZzFSEIGth-d3dQEjrA2VE4ERMGcUvf6J8xabcz-4uPscb-DgvyzR20beT6ERnoDtHrH4Ma82MtrYK_iG4Pzyq1gMSwu6jrzyenAhP5AIlhS9HwZmAb_5id4rgVoOv5XfKlDH_pcM__hF4WGhMJm8wC-6-AucHAz18Arbg9jQ-Kh9F3o7i6OB23pAOxmJCqEXiBsEYC26-LH7MpJDGbGXwzxz__6MFf_FeutjpjCxn8Qoj-MKoiQi2PIY-obW8Nm9WB59HLaVnP1jXDw_mTStLb0QPVwrpuuZ3BKbdR2KkfwOb_zwsDH0z3T2U4Y0prvAEZrIJrAQO_zZEtmY7P3sq30yYRCrsIb2QXYnAbYasy-rLg9vNbnIqNckmFwIsLDnInD5xZcmzOZe0kSFOqK5-S-o2TytPgbw9STclMnA3pF-MnELvqSI5Hp_GxenIKowlQUEbimd0ZnwM5twAZyJ7D1cwuKWLNvsZupFpxeyn-Qssdw2gR028uIt-q7u4MyTWBdgCqGUoM5UZCI9hRicBYccDnkCktWt1CSScCS6ut8RQuHppijt63T6b7k1gYbaGIz-HaISK-fzHPWS2vbJq0QrXSqlkLPuRUEjGrQqrAGHLhNNBLvum8sOm2cei7X7CEz00rYw7flx2XKtEpyWxxWT6Dm_OTHj8yDuufbk2ZhxF2sxtpOm42lfDxqtGqsmpAEuXCCI0arDBoFyGLSM4xVs5cGuM8voWtZJug-5q8QFgd0DgiIp-tAA5aHM0didcDB3AaGgocFndz0VlgCIP6EXPWU3j9aT4RGbfAGSvu8QWOzCqiXZ41bMXokWraX7NYXlGa8eMtjhAdmk3d7sjkgaTxitsZ3bVn4hPYgjlTWqLitYCJj-n_sVvWUAqKvHEnvmz5gL5N1xyV6nLLqP1CWM4jezPTTT_QnFvt3x15JZN3UNg6Oc3lRjJiy0E4cInD4WWyC_84jaM4ZTMa6ezxBn8MKrEcnDbPxzkBWNpNI1h-IUtioU48UR4qXQ9_ijaxhbBqKOl-VBQzkmkjSgLJUTL3oztfum_T2gYDmDjvU7ZsPimgDI013tV5sevovfGJjSEYEwJN75D9qA3-bfonUbbQqbrIjlUGggKYwbiw6cFz19C5bbsekvvFkinZLYLkL-65Q30ONXznOtB4yl3w-V-gOTACn31C_-vsrizLFQD3Q7loeA_GJ9AT6DJbwghR0WcCmf7q_OEL5_HamNwSJE8vW9I-TlcvRugz-RosE-i8M8jTglwskmzqLA8vSQfStgHouQm_9nUAQCsQShMqEXMV8MhNaV3RGUWAOPgcECYuP3nQHNwlbuRYA8mLjkFIn8GYw9K-DVOs2E-9npknAkawy3qbb4VkoDGKk0jiiYGzFfI7DQifQvhXohkrjqH2f0ypAo6f1U8Gq6F52-zQin-wG0AQL32CnVvPHA9LlwKHgoop6032BzHSubOoA_phQ0ZTSU9ZLdC7l5DJeX-h5e98OQKs7sReJ3pBmWgdIeqdo2vhYZxtkO1rb29fSfUB11AbyMk-JHYjM4pxqhJII3L2QAls6GzjmSdwyRt-MIW97ytzH3y1r9Yr0tgInSJYzGEooQJvzUHNG18cXek1YfUhuKpIHiQ1wSKbMMqw2gDypQEanRutsOhmMeuZzADE3AxqUe0sJN42ysHpK-2CyQzwaKAAj12yXkkvLO_phQGGERhIS61lpoMxibF4czpwE6ZBaYzZHcN5BTD7623D9t0eWLN9PYbt9zkC2CqPoqhNsgvBIp89wf373zxOi6YBpVPLauoeBXdyQKtQWRFKgFPl4mpPy1_wy6ZiSTl-4KWOfKiRft7FP4bpEfva3fMo7NAJAcBfPIGNmj1PffonMRYQG0n6HWRGgHBYIOpyO6GTlyEajrrO8MkX4KgrTjHljMxZs",
+      "poster": "https://thumbs.dfs.ivi.ru/storage30/contents/c/c/e934645a5e1cc379ebd22e1a3bd3fa.jpg/858x483/?q=85",
+      "janres": "комедия",
+      "desc": "Аристократ на коляске нанимает в сиделки бывшего заключенного. Искрометная французская комедия с Омаром Си"
+    }
+  ],
   "watch-later": []
 }

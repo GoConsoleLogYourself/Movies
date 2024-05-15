@@ -1,15 +1,39 @@
 import { FC } from "react";
 import styles from "./moviePage.module.scss";
 import { useNavigate, useParams } from "react-router-dom";
-import { useGetMoviesQuery } from "../../store/moviesApi";
+import {
+  useAddFavouriteMoviesMutation,
+  useAddWatchLaterMoviesMutation,
+  useGetFavouriteMoviesQuery,
+  useGetMoviesQuery,
+} from "../../store/moviesApi";
 import Header from "../../components/Header/Header";
 import Player from "../../components/Player/Player";
+import { useAuth } from "../../hooks/useAuth";
+import { getRandomInt } from "../../utils/GetRandomInt";
 
 const MoviePage: FC = () => {
   const params = useParams();
   const navigate = useNavigate();
   const { data = [] } = useGetMoviesQuery(40);
+  const { data: favouriteMovies = [] } = useGetFavouriteMoviesQuery(40);
+  console.log(favouriteMovies);
+  const [addWatchLaterMovie] = useAddWatchLaterMoviesMutation();
+  const [addFavouriteMovie] = useAddFavouriteMoviesMutation();
+  const { id } = useAuth();
   const currentMovie = data.find((item) => item.title.trim() === params.title);
+  const handleAddWatchLaterMovie = async () => {
+    await addWatchLaterMovie({
+      ...currentMovie!,
+      id: id + getRandomInt(10000),
+    });
+  };
+  const handleAddFavouriteMovie = async () => {
+    await addFavouriteMovie({
+      ...currentMovie!,
+      id: id + getRandomInt(10000),
+    });
+  };
   return (
     <>
       <Header data={data} />
@@ -21,8 +45,8 @@ const MoviePage: FC = () => {
           <div className={styles.movieOptions}>
             <img src={currentMovie?.img} alt="img" />
             <div>
-              <p>Отложить просмотр</p>
-              <p>Добавить в избранное</p>
+              <p onClick={handleAddWatchLaterMovie}>Отложить просмотр</p>
+              <p onClick={handleAddFavouriteMovie}>Добавить в избранное</p>
             </div>
           </div>
           <div className={styles.movieDesc}>

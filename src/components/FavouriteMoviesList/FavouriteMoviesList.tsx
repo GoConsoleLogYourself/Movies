@@ -3,14 +3,19 @@ import styles from "./favouriteMoviesList.module.scss";
 import { useGetFavouriteMoviesQuery } from "../../store/moviesApi";
 import Card from "../Card/Card";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../hooks/useAuth";
 
 const FavouriteMoviesList: FC = () => {
   const { data = [] } = useGetFavouriteMoviesQuery(40);
+  const { id } = useAuth();
   const navigate = useNavigate();
+  const currentUserFavourites = data.filter((item) =>
+    item.id.toString().includes(id)
+  );
   return (
     <div className={styles.favouritesList}>
-      {data.length > 0 ? (
-        data.map((item) => (
+      {currentUserFavourites.length > 0 ? (
+        currentUserFavourites.map((item) => (
           <Card
             key={item.id}
             title={item.title}
@@ -18,6 +23,7 @@ const FavouriteMoviesList: FC = () => {
             date={item.date}
             img={item.img}
             janre={item.janres}
+            noDesc
             onClick={() => navigate(`/movies/${item.title}`)}
           />
         ))

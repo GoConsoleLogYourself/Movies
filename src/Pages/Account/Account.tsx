@@ -7,12 +7,18 @@ import FavouriteMoviesList from "../../components/FavouriteMoviesList/FavouriteM
 import { useAuth } from "../../hooks/useAuth";
 import { useAppDispatch, useAppSelector } from "../../hooks";
 import { removeUser } from "../../store/slices/userSlice";
+import { useNavigate } from "react-router-dom";
 
 const Account: FC = () => {
   const { data = [] } = useGetMoviesQuery(40);
   const {} = useAuth();
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const { userName } = useAppSelector((state) => state.user);
+  const handleLogout = () => {
+    dispatch(removeUser());
+    navigate("/movies");
+  };
   return (
     <>
       <Header data={data} />
@@ -28,7 +34,9 @@ const Account: FC = () => {
           <h3>Ваш список избранных фильмов:</h3>
           <FavouriteMoviesList />
         </section>
-        <button onClick={() => dispatch(removeUser())}>Выйти</button>
+        <button className={styles.exitBtn} onClick={() => handleLogout()}>
+          Выйти
+        </button>
       </main>
     </>
   );

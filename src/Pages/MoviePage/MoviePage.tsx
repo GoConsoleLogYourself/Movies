@@ -4,7 +4,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import {
   useAddFavouriteMoviesMutation,
   useAddWatchLaterMoviesMutation,
-  useGetFavouriteMoviesQuery,
   useGetMoviesQuery,
 } from "../../store/moviesApi";
 import Header from "../../components/Header/Header";
@@ -16,8 +15,6 @@ const MoviePage: FC = () => {
   const params = useParams();
   const navigate = useNavigate();
   const { data = [] } = useGetMoviesQuery(40);
-  const { data: favouriteMovies = [] } = useGetFavouriteMoviesQuery(40);
-  console.log(favouriteMovies);
   const [addWatchLaterMovie] = useAddWatchLaterMoviesMutation();
   const [addFavouriteMovie] = useAddFavouriteMoviesMutation();
   const { id } = useAuth();

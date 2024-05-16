@@ -1,17 +1,24 @@
 import { FC } from "react";
 import styles from "./watchLaterList.module.scss";
-import { useGetWatchLaterMoviesQuery } from "../../store/moviesApi";
+import {
+  useDeleteWatchLaterMoviesMutation,
+  useGetWatchLaterMoviesQuery,
+} from "../../store/moviesApi";
 import Card from "../Card/Card";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 
 const WatchLaterList: FC = () => {
   const { data = [] } = useGetWatchLaterMoviesQuery(40);
+  const [deleteMovie] = useDeleteWatchLaterMoviesMutation();
   const navigate = useNavigate();
   const { id } = useAuth();
   const currentUserWatchLater = data.filter((item) =>
     item.id.toString().includes(id)
   );
+  const handleDeleteFromWatchLater = async (id: number) => {
+    await deleteMovie(id).unwrap();
+  };
   return (
     <div className={styles.watchLaterList}>
       {currentUserWatchLater.length > 0 ? (
@@ -24,6 +31,8 @@ const WatchLaterList: FC = () => {
             img={item.img}
             janre={item.janres}
             noDesc
+            deleteBtn
+            onDeleteBtnClick={() => handleDeleteFromWatchLater(item.id)}
             onClick={() => navigate(`/movies/${item.title}`)}
           />
         ))

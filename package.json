@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://Kunnilingus.github.io/Movies",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -32,6 +33,7 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "gh-pages": "^6.1.1",
     "sass": "^1.75.0",
     "typescript": "^5.2.2",
     "typescript-plugin-css-modules": "^5.1.0",

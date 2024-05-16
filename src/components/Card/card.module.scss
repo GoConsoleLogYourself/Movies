@@ -3,6 +3,14 @@
 @import "../../Scss/base";
 @import "../../Scss/fonts";
 
+.container {
+  width: min-content;
+  &:hover {
+    transform: translate(2%, -2%);
+    transition: all 0.2s ease-in;
+  }
+}
+
 .card {
   width: 300px;
   height: 450px;
@@ -12,10 +20,7 @@
   &:hover .info {
     display: block;
   }
-  &:hover {
-    transform: translate(2%, -2%);
-    transition: all 0.2s ease-in;
-  }
+
   img {
     border-radius: 20px;
   }
@@ -74,4 +79,11 @@
 
 .none {
   display: none;
+}
+
+.close {
+  position: absolute;
+  margin-left: 300px;
+  width: 32px;
+  cursor: pointer;
 }

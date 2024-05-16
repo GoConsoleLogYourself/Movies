@@ -14,7 +14,7 @@ import { LazyRegister } from "./Pages/Register/Register.lazy.tsx";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
-    <BrowserRouter>
+    <BrowserRouter basename="/Movies/">
       <PersistGate loading={<Loading />} persistor={persistor}>
         <Routes>
           <Route path="/movies" element={<App />} />

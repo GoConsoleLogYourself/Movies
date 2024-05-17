@@ -12,6 +12,7 @@ import {
 } from "../../store/slices/movieSlice";
 import { useNavigate } from "react-router-dom";
 import Card from "../../components/Card/Card";
+import Loading from "../../components/Loading/Loading";
 
 function App() {
   const [minYear, setMinYear] = useState<string>("1980");
@@ -23,7 +24,7 @@ function App() {
   const [lowestRatingChoosen, setLowestRatingChoosen] =
     useState<boolean>(false);
   const [failedFilter, setFailedFilter] = useState<boolean>(false);
-  const { data = [] } = useGetMoviesQuery(40);
+  const { data = [], isError, isLoading } = useGetMoviesQuery(40);
   const { movies } = useAppSelector((state) => state.movies);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
@@ -103,29 +104,38 @@ function App() {
             <p>К сожалению поиск не дал результатов...</p>
             <img src={fail} alt="fail" />
           </div>
-          {movies.length <= 0
-            ? data.map((item) => (
-                <Card
-                  key={item.id}
-                  title={item.title}
-                  rating={item.rating}
-                  date={item.date}
-                  img={item.img}
-                  janre={item.janres}
-                  onClick={() => navigate(`/movies/${item.title}`)}
-                />
-              ))
-            : movies.map((item) => (
-                <Card
-                  key={item.id}
-                  title={item.title}
-                  rating={item.rating}
-                  date={item.date}
-                  img={item.img}
-                  janre={item.janres}
-                  onClick={() => navigate(`/movies/${item.title}`)}
-                />
-              ))}
+          {isError ? (
+            <div className={styles.failedFilter}>
+              <p>Произошла ошибка при загрузке данных...</p>
+              <img src={fail} alt="fail" />
+            </div>
+          ) : isLoading ? (
+            <Loading />
+          ) : movies.length <= 0 ? (
+            data.map((item) => (
+              <Card
+                key={item.id}
+                title={item.title}
+                rating={item.rating}
+                date={item.date}
+                img={item.img}
+                janre={item.janres}
+                onClick={() => navigate(`/movies/${item.title}`)}
+              />
+            ))
+          ) : (
+            movies.map((item) => (
+              <Card
+                key={item.id}
+                title={item.title}
+                rating={item.rating}
+                date={item.date}
+                img={item.img}
+                janre={item.janres}
+                onClick={() => navigate(`/movies/${item.title}`)}
+              />
+            ))
+          )}
         </section>
         <section className={styles.filter}>
           <form>

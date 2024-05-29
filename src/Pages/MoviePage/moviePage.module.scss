@@ -39,6 +39,7 @@
 }
 
 .player {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -63,5 +64,88 @@
       }
       transition: all 0.2s ease-in;
     }
+  }
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  margin-top: 25px;
+  width: 70%;
+}
+
+.theme {
+  position: absolute;
+  top: 0;
+  margin-top: -50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 5px;
+    background-color: #c7c6c6;
+    -webkit-box-shadow: inset 0px 0px 10px 2px rgb(0, 0, 0);
+    -moz-box-shadow: inset 0px 0px 10px 2px rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px 2px rgb(0, 0, 0);
+  }
+  img {
+    width: 30px;
+    cursor: pointer;
+  }
+}
+.themeIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: #884242;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.light {
+  background-color: #fff;
+}
+.dark {
+  background-color: #3a3939;
+  margin-top: -10px;
+}
+
+.nothig {
+  display: flex;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
   }
 }

@@ -1,0 +1,135 @@
+@import "../../Scss/reset";
+@import "../../Scss/vars";
+@import "../../Scss/base";
+@import "../../Scss/fonts";
+
+.header {
+  font-size: 32px;
+  @include headers-font;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 250px;
+  textarea {
+    margin-top: 25px;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 5px;
+    width: 50%;
+    height: 100%;
+  }
+  button {
+    border: 1px solid black;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    width: 150px;
+    height: 50px;
+    margin-top: 25px;
+    &:hover {
+      background-color: red;
+      color: black;
+    }
+    transition: all 0.2s ease-in;
+  }
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  gap: 20px;
+  width: 100%;
+  min-height: 250px;
+  max-height: max-content;
+  border: 1px solid black;
+  border-radius: 20px;
+  p {
+    font-size: 24px;
+    @include headers-font;
+    margin: auto;
+    align-self: center;
+    justify-self: center;
+  }
+  -webkit-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+}
+
+.comment {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  min-width: 70%;
+  max-width: 100%;
+  p {
+    font-size: 20px;
+    @include text-font;
+  }
+  width: 70%;
+  height: max-content;
+  -webkit-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
+}
+
+.dateAndUserName {
+  display: flex;
+  gap: 100px;
+  position: absolute;
+  top: 0;
+  margin-top: -9px;
+  margin-left: 10px;
+  span {
+    background-color: #fff;
+  }
+}
+
+.commentText {
+  overflow-wrap: break-word;
+  word-break: break-all;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  overflow: hidden;
+}
+
+.likesAndDeleteComment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.likes {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  gap: 15px;
+  div {
+    cursor: pointer;
+  }
+}
+
+.deleteComment {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.likesCountPositive {
+  color: green;
+}
+.likesCountNegative {
+  color: red;
+}
+
+.none {
+  display: none;
+}

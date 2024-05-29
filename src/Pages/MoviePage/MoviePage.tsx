@@ -1,5 +1,7 @@
 import { FC } from "react";
 import styles from "./moviePage.module.scss";
+import day from "../../assets/day.png";
+import night from "../../assets/night.png";
 import { useNavigate, useParams } from "react-router-dom";
 import {
   useAddFavouriteMoviesMutation,
@@ -10,15 +12,24 @@ import Header from "../../components/Header/Header";
 import Player from "../../components/Player/Player";
 import { useAuth } from "../../hooks/useAuth";
 import { getRandomInt } from "../../utils/GetRandomInt";
+import { useAppDispatch, useAppSelector } from "../../hooks";
+import Comments from "../../components/Comments/Comments";
+import { setDarkTheme, setLightTheme } from "../../store/slices/themeSlice";
 
 const MoviePage: FC = () => {
   const params = useParams();
   const navigate = useNavigate();
+  const dispatch = useAppDispatch();
   const { data = [] } = useGetMoviesQuery(40);
   const [addWatchLaterMovie] = useAddWatchLaterMoviesMutation();
   const [addFavouriteMovie] = useAddFavouriteMoviesMutation();
   const { id } = useAuth();
+  const { comments } = useAppSelector((state) => state.comments);
+  const { dark, light } = useAppSelector((state) => state.theme);
   const currentMovie = data.find((item) => item.title.trim() === params.title);
+  const currentMovieComments = comments.filter(
+    (item) => item.title === currentMovie!.title
+  );
   const handleAddWatchLaterMovie = async () => {
     await addWatchLaterMovie({
       ...currentMovie!,
@@ -32,11 +43,12 @@ const MoviePage: FC = () => {
     });
   };
   return (
-    <>
+    <div className={light ? styles.light : styles.dark}>
       <Header data={data} />
       <button className={styles.goBack} onClick={() => navigate(-1)}>
         {"< Назад"}
       </button>
+
       <main className={styles.movieContainer}>
         <section className={styles.movieInfo}>
           <div className={styles.movieOptions}>
@@ -55,10 +67,32 @@ const MoviePage: FC = () => {
           </div>
         </section>
         <section className={styles.player}>
+          <div className={styles.theme}>
+            <div>
+              <span
+                onClick={() => dispatch(setLightTheme())}
+                className={light ? styles.themeIcon : styles.nothig}
+              >
+                <img src={day} alt="day" />
+              </span>
+              <span
+                onClick={() => dispatch(setDarkTheme())}
+                className={dark ? styles.themeIcon : styles.nothig}
+              >
+                <img src={night} alt="night" />
+              </span>
+            </div>
+          </div>
           <Player poster={currentMovie?.poster} />
         </section>
+        <section className={styles.comments}>
+          <Comments
+            title={currentMovie!.title}
+            comments={currentMovieComments}
+          />
+        </section>
       </main>
-    </>
+    </div>
   );
 };
 

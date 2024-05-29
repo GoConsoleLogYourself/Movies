@@ -29,12 +29,6 @@ const Card: FC<CardProps> = ({
 }) => {
   return (
     <div className={styles.container}>
-      <div
-        onClick={() => onDeleteBtnClick!(id!)}
-        className={deleteBtn ? styles.close : styles.none}
-      >
-        <img src={close} alt="close" />
-      </div>
       <div onClick={onClick} className={styles.card}>
         <div className={styles.rating}>
           <p>{rating}</p>
@@ -45,6 +39,12 @@ const Card: FC<CardProps> = ({
           <p>{date}</p>
           <p>{janre}</p>
         </div>
+      </div>
+      <div
+        onClick={() => onDeleteBtnClick!(id!)}
+        className={deleteBtn ? styles.close : styles.none}
+      >
+        <img src={close} alt="close" />
       </div>
     </div>
   );

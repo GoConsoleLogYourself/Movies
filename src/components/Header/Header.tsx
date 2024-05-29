@@ -8,6 +8,7 @@ import { addSearchedMovies } from "../../store/slices/movieSlice";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 
+
 interface HeadersProps {
   data: IMovie[];
 }
@@ -48,9 +49,10 @@ const Header: FC<HeadersProps> = ({ data }) => {
           </div>
         </button>
       </form>
-      <div onClick={() => handleCheckLogin()} className={styles.accLink}>
+
+      <span onClick={() => handleCheckLogin()} className={styles.accLink}>
         Account
-      </div>
+      </span>
     </div>
   );
 };

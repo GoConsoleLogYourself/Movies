@@ -13,6 +13,8 @@ import storage from "redux-persist/lib/storage";
 import { moviesApi } from "./moviesApi";
 import movieSlice from "./slices/movieSlice";
 import userSlice from "./slices/userSlice";
+import commentSlice from "./slices/commentSlice";
+import themeSlice from "./slices/themeSlice";
 
 const persistConfig = {
   key: "root",
@@ -24,6 +26,8 @@ const rootReducer = combineReducers({
   [moviesApi.reducerPath]: moviesApi.reducer,
   movies: movieSlice,
   user: userSlice,
+  comments: commentSlice,
+  theme: themeSlice,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

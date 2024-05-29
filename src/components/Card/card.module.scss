@@ -4,6 +4,7 @@
 @import "../../Scss/fonts";
 
 .container {
+  display: flex;
   width: min-content;
   &:hover {
     transform: translate(2%, -2%);
@@ -82,8 +83,6 @@
 }
 
 .close {
-  position: absolute;
-  margin-left: 300px;
   width: 32px;
   cursor: pointer;
 }

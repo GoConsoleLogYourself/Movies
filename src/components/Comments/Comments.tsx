@@ -22,6 +22,7 @@ const Comments: FC<CommentsProps> = ({ comments, title }) => {
   const [dislikesID, setDislikesID] = useState<number>(0);
   const [dislikes, setDislikes] = useState<string>("");
   const { userName } = useAppSelector((state) => state.user);
+  const { light } = useAppSelector((state) => state.theme);
   const dispatch = useAppDispatch();
   const handleAddComment = (e: FormEvent) => {
     e.preventDefault();
@@ -66,22 +67,35 @@ const Comments: FC<CommentsProps> = ({ comments, title }) => {
   };
   return (
     <>
-      <h2 className={styles.header}>Оставьте комментарий!</h2>
-      <form className={styles.form}>
+      <h2 className={light ? styles.header : styles.headerDark}>
+        Оставьте комментарий!
+      </h2>
+      <form className={light ? styles.form : styles.formDark}>
         <textarea
           value={comment}
           onChange={(e) => setComment(e.target.value)}
         />
         <button onClick={handleAddComment}>Отправить</button>
       </form>
-      <section className={styles.comments}>
+      <section className={light ? styles.comments : styles.commentsDark}>
         {comments.length ? (
           comments.map((item) => (
-            <div className={styles.comment} key={item.id}>
-              <div className={styles.dateAndUserName}>
+            <div
+              className={light ? styles.comment : styles.commentDark}
+              key={item.id}
+            >
+              <div
+                className={
+                  light ? styles.dateAndUserName : styles.dateAndUserNameDark
+                }
+              >
                 <span>{item.userName}</span> <span>{item.date}</span>{" "}
               </div>
-              <p className={styles.commentText}>{item.comment}</p>
+              <p
+                className={light ? styles.commentText : styles.commentTextDark}
+              >
+                {item.comment}
+              </p>
               <div className={styles.likesAndDeleteComment}>
                 <div className={styles.likes}>
                   <div onClick={() => handleLike(item.id)}>
@@ -100,7 +114,7 @@ const Comments: FC<CommentsProps> = ({ comments, title }) => {
                     <img src={dislike} alt="dislike" />
                   </div>
                 </div>
-                <span
+                <div
                   className={
                     userName === item.userName
                       ? styles.deleteComment
@@ -108,13 +122,21 @@ const Comments: FC<CommentsProps> = ({ comments, title }) => {
                   }
                   onClick={() => dispatch(deleteComment(item.id))}
                 >
-                  Удалить комментарий
-                </span>
+                  <span
+                    className={
+                      light ? styles.commentText : styles.commentTextDark
+                    }
+                  >
+                    Удалить комментарий
+                  </span>
+                </div>
               </div>
             </div>
           ))
         ) : (
-          <p>Комментариев пока нет,будьте первыми!</p>
+          <p className={light ? styles.noComments : styles.noCommentsDark}>
+            Комментариев пока нет,будьте первыми!
+          </p>
         )}
       </section>
     </>

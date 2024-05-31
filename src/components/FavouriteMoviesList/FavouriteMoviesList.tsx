@@ -7,11 +7,13 @@ import {
 import Card from "../Card/Card";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
+import { useAppSelector } from "../../hooks";
 
 const FavouriteMoviesList: FC = () => {
   const { data = [] } = useGetFavouriteMoviesQuery(40);
   const [deleteMovie] = useDeleteFavouriteMoviesMutation();
   const { id } = useAuth();
+  const { light } = useAppSelector((state) => state.theme);
   const navigate = useNavigate();
   const currentUserFavourites = data.filter((item) =>
     item.id.toString().includes(id)
@@ -20,7 +22,7 @@ const FavouriteMoviesList: FC = () => {
     await deleteMovie(id).unwrap();
   };
   return (
-    <div className={styles.favouritesList}>
+    <div className={light ? styles.favouritesList : styles.favouritesListDark}>
       {currentUserFavourites.length > 0 ? (
         currentUserFavourites.map((item) => (
           <Card

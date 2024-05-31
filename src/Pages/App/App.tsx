@@ -26,6 +26,7 @@ function App() {
   const [failedFilter, setFailedFilter] = useState<boolean>(false);
   const { data = [], isError, isLoading } = useGetMoviesQuery(40);
   const { movies } = useAppSelector((state) => state.movies);
+  const { light } = useAppSelector((state) => state.theme);
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const filterMovies = () => {
@@ -74,7 +75,7 @@ function App() {
     setLowestRatingChoosen(true);
   };
   return (
-    <main className={styles.app}>
+    <main className={light ? styles.app : styles.appDark}>
       <Header data={data} />
       <main className={styles.main}>
         <div className={styles.sortByRating}>
@@ -82,8 +83,10 @@ function App() {
             onClick={() => sortByHighestRating()}
             className={
               highestRatingChoosen
-                ? `${styles.best} ${styles.choosen}`
-                : styles.best
+                ? `${light ? styles.best : styles.bestDark} ${
+                    light ? styles.choosen : styles.choosenDark
+                  }`
+                : `${light ? styles.best : styles.bestDark}`
             }
           >
             Сначала лучшие
@@ -92,8 +95,10 @@ function App() {
             onClick={() => sortByLowestRating()}
             className={
               lowestRatingChoosen
-                ? `${styles.worst} ${styles.choosen}`
-                : styles.worst
+                ? `${light ? styles.worst : styles.worstDark} ${
+                    light ? styles.choosen : styles.choosenDark
+                  }`
+                : `${light ? styles.worst : styles.worstDark}`
             }
           >
             Сначала худшие
@@ -137,7 +142,7 @@ function App() {
             ))
           )}
         </section>
-        <section className={styles.filter}>
+        <section className={light ? styles.filter : styles.filterDark}>
           <form>
             <p>
               Выберите год <br /> от:

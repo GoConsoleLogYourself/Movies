@@ -1,17 +1,23 @@
+@import "../../Scss/reset";
+@import "../../Scss/vars";
+@import "../../Scss/base";
+@import "../../Scss/fonts";
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
-  margin-top: 10px;
   margin-left: 50px;
   margin-right: 50px;
   form {
     position: relative;
   }
-  img {
-    cursor: pointer;
-  }
+}
+
+.logo {
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 .search {
@@ -23,6 +29,12 @@
   border-radius: 15px;
   border: 1px solid red;
   text-align: center;
+}
+
+.searchDark {
+  @extend .search;
+  background-color: $darker;
+  color: $grey-text;
 }
 
 .searchBtn {
@@ -55,4 +67,91 @@
   transition: all 0.2s ease-in;
 }
 
+.accLinkDark {
+  font-size: 20px;
+  text-decoration: underline red;
+  cursor: pointer;
+  color: $grey-text;
+  &:hover {
+    color: red;
+    text-decoration: underline $grey-text;
+  }
+  transition: all 0.2s ease-in;
+}
 
+.themeAndAcc {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 5px;
+    background-color: $darker;
+    -webkit-box-shadow: inset 0px 0px 10px 2px rgb(0, 0, 0);
+    -moz-box-shadow: inset 0px 0px 10px 2px rgb(0, 0, 0);
+    box-shadow: inset 0px 0px 10px 2px rgb(0, 0, 0);
+  }
+  img {
+    width: 30px;
+    cursor: pointer;
+  }
+}
+.themeIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #7a7979;
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.light {
+  background-color: #fff;
+}
+.dark {
+  background-color: #3a3939;
+  margin-top: -10px;
+}
+
+.nothig {
+  display: flex;
+}
+
+@-webkit-keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}

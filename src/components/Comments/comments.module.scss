@@ -7,6 +7,11 @@
   font-size: 32px;
   @include headers-font;
 }
+.headerDark {
+  color: $grey-text;
+  font-size: 32px;
+  @include headers-font;
+}
 
 .form {
   display: flex;
@@ -37,6 +42,14 @@
     transition: all 0.2s ease-in;
   }
 }
+.formDark {
+  @extend .form;
+  textarea {
+    background-color: #2c2a2a;
+    color: #c4bdbd;
+    outline: none;
+  }
+}
 
 .comments {
   display: flex;
@@ -63,6 +76,11 @@
   box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
 }
 
+.commentsDark {
+  @extend .comments;
+  background-color: #2c2a2a;
+}
+
 .comment {
   position: relative;
   border: 1px solid black;
@@ -81,6 +99,11 @@
   box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.75);
 }
 
+.commentDark {
+  @extend .comment;
+  background-color: #3a3939;
+}
+
 .dateAndUserName {
   display: flex;
   gap: 100px;
@@ -93,6 +116,20 @@
   }
 }
 
+.dateAndUserNameDark {
+  @extend .dateAndUserName;
+  span {
+    color: #c4bdbd;
+    background: rgb(58, 57, 57);
+    background: linear-gradient(
+      0deg,
+      rgba(58, 57, 57, 1) 0%,
+      rgba(58, 57, 57, 1) 50%,
+      rgba(44, 42, 42, 1) 100%
+    );
+  }
+}
+
 .commentText {
   overflow-wrap: break-word;
   word-break: break-all;
@@ -100,6 +137,11 @@
   white-space: -moz-pre-wrap;
   white-space: -pre-wrap;
   overflow: hidden;
+}
+
+.commentTextDark {
+  @extend .commentText;
+  color: #c4bdbd;
 }
 
 .likesAndDeleteComment {
@@ -132,4 +174,11 @@
 
 .none {
   display: none;
+}
+
+.noComments {
+  color: black;
+}
+.noCommentsDark {
+  color: #c4bdbd;
 }

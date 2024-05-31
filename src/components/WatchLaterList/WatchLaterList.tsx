@@ -7,12 +7,14 @@ import {
 import Card from "../Card/Card";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
+import { useAppSelector } from "../../hooks";
 
 const WatchLaterList: FC = () => {
   const { data = [] } = useGetWatchLaterMoviesQuery(40);
   const [deleteMovie] = useDeleteWatchLaterMoviesMutation();
   const navigate = useNavigate();
   const { id } = useAuth();
+  const { light } = useAppSelector((state) => state.theme);
   const currentUserWatchLater = data.filter((item) =>
     item.id.toString().includes(id)
   );
@@ -20,7 +22,7 @@ const WatchLaterList: FC = () => {
     await deleteMovie(id).unwrap();
   };
   return (
-    <div className={styles.watchLaterList}>
+    <div className={light ? styles.watchLaterList : styles.watchLaterListDark}>
       {currentUserWatchLater.length > 0 ? (
         currentUserWatchLater.map((item) => (
           <Card

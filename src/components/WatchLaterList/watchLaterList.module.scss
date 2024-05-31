@@ -32,6 +32,10 @@
     }
   }
 }
+.watchLaterListDark {
+  @extend .watchLaterList;
+  background-color: $darker;
+}
 
 .watchLaterList::-webkit-scrollbar {
   height: 10px;

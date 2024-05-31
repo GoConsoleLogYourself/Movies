@@ -33,6 +33,11 @@
   }
 }
 
+.favouritesListDark {
+  @extend .favouritesList;
+  background-color: $darker;
+}
+
 .favouritesList::-webkit-scrollbar {
   height: 10px;
 }

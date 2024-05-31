@@ -7,12 +7,16 @@
   @include headers-font;
 }
 
+.appDark {
+  @extend .app;
+  background-color: $background;
+}
+
 .main {
   display: flex;
   margin-right: 50px;
   margin-left: 50px;
   margin-top: 150px;
-  margin-bottom: 50px;
   justify-content: space-between;
 }
 .cards {
@@ -20,6 +24,7 @@
   flex-wrap: wrap;
   gap: 50px;
   width: 1400px;
+  margin-bottom: 50px;
 }
 
 .filter {
@@ -30,9 +35,9 @@
   border-radius: 20px;
   width: 350px;
   height: 600px;
-  -webkit-box-shadow: 10px 10px 5px -7px rgba(145, 0, 0, 1);
-  -moz-box-shadow: 10px 10px 5px -7px rgba(145, 0, 0, 1);
-  box-shadow: 10px 10px 5px -7px rgba(145, 0, 0, 1);
+  -webkit-box-shadow: 10px 10px 5px -7px rgb(0, 0, 0, 0.62);
+  -moz-box-shadow: 10px 10px 5px -7px rgb(0, 0, 0, 0.62);
+  box-shadow: 10px 10px 5px -7px rgb(0, 0, 0, 0.62);
   form {
     display: flex;
     flex-direction: column;
@@ -44,6 +49,12 @@
       font-size: 20px;
     }
   }
+}
+
+.filterDark {
+  @extend .filter;
+  background-color: $darker;
+  color: $grey-text;
 }
 
 .changeRating {
@@ -69,6 +80,7 @@
     margin-bottom: 10px;
   }
   select {
+    cursor: pointer;
     border: 1px solid black;
     border-radius: 20px;
     height: 35px;
@@ -152,6 +164,15 @@
   }
   transition: all 0.2s ease-in;
 }
+
+.bestDark {
+  @extend .best;
+  color: $grey-text;
+  &:hover {
+    background-color: $darker;
+  }
+}
+
 .worst {
   width: 70px;
   border-top-right-radius: 15px;
@@ -163,6 +184,19 @@
   transition: all 0.2s ease-in;
 }
 
+.worstDark {
+  @extend .worst;
+  color: $grey-text;
+  &:hover {
+    background-color: $darker;
+  }
+}
+
 .choosen {
   background-color: rgb(218, 211, 211);
+}
+
+.choosenDark {
+  background-color: $darker;
+  color: $grey-text;
 }

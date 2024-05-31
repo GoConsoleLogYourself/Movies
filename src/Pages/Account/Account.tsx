@@ -15,14 +15,15 @@ const Account: FC = () => {
   const dispatch = useAppDispatch();
   const navigate = useNavigate();
   const { userName } = useAppSelector((state) => state.user);
+  const { light } = useAppSelector((state) => state.theme);
   const handleLogout = () => {
     dispatch(removeUser());
     navigate("/movies");
   };
   return (
-    <>
+    <main className={light ? styles.lightTheme : styles.darkTheme}>
       <Header data={data} />
-      <main className={styles.account}>
+      <main className={light ? styles.account : styles.accountDark}>
         <section className={styles.userInfo}>
           <h1>Добро пожаловать,{userName}!</h1>
         </section>
@@ -38,7 +39,7 @@ const Account: FC = () => {
           Выйти
         </button>
       </main>
-    </>
+    </main>
   );
 };
 
